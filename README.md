@@ -1,8 +1,8 @@
 ---
-title: escudo-imunologico
+title: black
 emoji: 🐳
 colorFrom: gray
-colorTo: blue
+colorTo: pink
 sdk: static
 pinned: false
 tags:

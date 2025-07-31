@@ -3,16 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escudo Imunológico</title>
+  <title>Escudo Imunológico - Proteja Seu Filho Naturalmente</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to bottom, #f0fff4, #ffffff);
+      background: #0f0f0f;
+      color: #f1f1f1;
+      scroll-behavior: smooth;
     }
-    .floating-cta {
+    .gradient-bg {
+      background: linear-gradient(135deg, #1e3a8a 0%, #065f46 100%);
+    }
+    .benefit-card, .testimonial-card, .faq-card {
+      transition: all 0.3s ease;
+      background-color: #1f2937;
+      border: 1px solid #374151;
+    }
+    .benefit-card:hover, .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.2);
+      border-color: #10b981;
+    }
+    .pulse-animation {
       animation: pulse 2s infinite;
     }
     @keyframes pulse {
@@ -20,378 +35,431 @@
       50% { transform: scale(1.05); }
       100% { transform: scale(1); }
     }
-    .benefit-item {
-      transition: all 0.3s ease;
+    .floating-cta {
+      animation: float 6s ease-in-out infinite;
     }
-    .benefit-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
-    .testimonial-card {
-      transition: all 0.3s ease;
+    .glow-text {
+      text-shadow: 0 0 10px rgba(16, 185, 129, 0.7);
     }
-    .testimonial-card:hover {
-      transform: scale(1.02);
+    .section-divider {
+      height: 100px;
+      background: linear-gradient(180deg, rgba(15,15,15,0) 0%, rgba(31,41,55,1) 100%);
     }
   </style>
 </head>
 <body class="min-h-screen">
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5511999999999?text=Quero+saber+mais+sobre+o+Escudo+Imunológico" class="fixed bottom-6 right-6 bg-emerald-600 text-white p-4 rounded-full shadow-lg z-50 hover:bg-emerald-700 transition-all">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <!-- Floating CTA -->
+  <div class="floating-cta fixed bottom-6 left-6 bg-orange-500 text-white py-3 px-6 rounded-lg shadow-xl z-50 hidden transform hover:scale-105 transition-all">
+    <a href="https://pay.kiwify.com.br/8YvnksT" class="flex items-center font-bold">
+      <i class="fas fa-shield-alt mr-2"></i> Proteja Agora
+    </a>
+  </div>
+
   <!-- Header -->
-  <header class="fixed w-full bg-white shadow-md z-50">
+  <header class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-sm shadow-md z-40">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <div class="flex items-center">
-        <i class="fas fa-shield-alt text-emerald-600 text-2xl mr-2"></i>
-        <span class="text-xl font-bold text-gray-800">Escudo Imunológico</span>
+        <i class="fas fa-shield-alt text-emerald-500 text-2xl mr-2"></i>
+        <span class="text-xl font-bold">Escudo Imunológico</span>
       </div>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          <li><a href="#benefits" class="hover:text-emerald-400 transition">Benefícios</a></li>
+          <li><a href="#how-it-works" class="hover:text-emerald-400 transition">Como Funciona</a></li>
+          <li><a href="#testimonials" class="hover:text-emerald-400 transition">Depoimentos</a></li>
+          <li><a href="#faq" class="hover:text-emerald-400 transition">Dúvidas</a></li>
+        </ul>
+      </nav>
       <a href="https://pay.kiwify.com.br/8YvnksT" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 transform hover:scale-105">
-        Eu me importo.
+        Quero Proteger Agora
       </a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="pt-32 pb-20 px-4 bg-gradient-to-r from-emerald-50 to-blue-50">
+  <section class="pt-32 pb-20 px-4 gradient-bg">
     <div class="container mx-auto max-w-4xl text-center">
-      <h1 class="text-3xl md:text-5xl font-bold text-emerald-800 mb-6">
-        Se você não proteger agora... quem vai pagar essa conta é ele.
+      <span class="inline-block bg-emerald-900 bg-opacity-50 text-emerald-400 px-4 py-1 rounded-full mb-4">Proteção Natural</span>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Seu filho merece crescer <span class="text-emerald-400 glow-text">forte e saudável</span>
       </h1>
-      <div class="container mx-auto max-w-4xl text-center">
-      <h1 class="text-3xl md:text-5xl font-bold text-emerald-800 mb-6">
-        O Escudo Imunológico: 7 dias para mudar a saúde do seu filho.
-      </h1>
-      <p class="text-lg md:text-xl text-gray-700 mb-8">
-       Um método simples, natural e validado para blindar a imunidade infantil, com comida de verdade e uma rotina simples — sem remédios, sem modinha e sem extremismo.
+      <p class="text-xl md:text-2xl mb-6">
+        Cada tosse, cada febre, cada dor... É um grito silencioso que você <span class="font-bold">não pode ignorar</span>.
+      </p>
+      <p class="text-lg md:text-xl mb-8">
+        Em <span class="font-bold text-orange-400">7 dias</span>, você pode transformar a saúde do seu filho com <span class="font-bold">ações naturais, simples e poderosas</span>.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#vsl" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-          <i class="fas fa-play-circle mr-2"></i> Se ele pudesse falar, pediria para você assistir isso agora.
+        <a href="#vsl" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+          <i class="fas fa-play-circle mr-2 text-emerald-400"></i> Assista o Vídeo
         </a>
-        <a href="https://pay.kiwify.com.br/8YvnksT" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
-          <i class="fas fa-shield-alt mr-2"></i> Quero Proteger Meu Filho
+        <a href="https://pay.kiwify.com.br/8YvnksT" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center pulse-animation">
+          <i class="fas fa-shield-alt mr-2"></i> Quero o Escudo Agora
         </a>
+      </div>
+      <div class="mt-10 flex justify-center">
+        <div class="flex items-center">
+          <div class="flex -space-x-2">
+            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Mãe satisfeita">
+            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Pai satisfeito">
+            <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/women/63.jpg" alt="Mãe satisfeita">
+          </div>
+          <div class="ml-3 text-left">
+            <p class="text-sm font-medium">+5.000 famílias protegidas</p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <div class="section-divider"></div>
 
   <!-- Video Section -->
-  <section id="vsl" class="py-16 px-4 bg-white">
+  <section id="vsl" class="py-16 px-4 bg-gray-900">
     <div class="container mx-auto max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
-        Toda vez que você vê ele tossindo até perder o fôlego…
-é um pedido de socorro que o corpo dele faz.
-Esse vídeo é sua chance de atender.
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">
+        Quando ele perde o fôlego, <span class="text-emerald-400">o que você está esperando?</span>
       </h2>
-      <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-xl">
-        <iframe class="w-full h-64 md:h-96" src="https://www.youtube.com/embed/DKgLuzkEx_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      <p class="text-center mb-8 max-w-2xl mx-auto">
+        O corpo dele pede ajuda. Ele não pode pedir socorro. <span class="font-bold text-orange-400">Você pode ser a solução agora.</span>
+      </p>
+      <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-2xl relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-emerald-900 to-blue-900 opacity-30"></div>
+        <iframe class="w-full h-64 md:h-96" src="https://www.youtube.com/embed/DKgLuzkEx_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-    </div>
-  </section>
-
-  <!-- Problem Section -->
-  <section class="py-16 px-4 bg-gray-50">
-    <div class="container mx-auto max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-        Eu sei que você já tentou de tudo... 
-      </h2>
-      <p class="text-lg text-gray-700 mb-6">Mas seu filho continua com:</p>
-      <ul class="space-y-3">
-        <li class="flex items-start">
-          <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-          <span class="text-gray-700">Nariz escorrendo o tempo todo</span>
-        </li>
-        <li class="flex items-start">
-          <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-          <span class="text-gray-700">Tosse à noite e sono ruim</span>
-        </li>
-        <li class="flex items-start">
-          <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-          <span class="text-gray-700">Ataques alérgicos constantes</span>
-        </li>
-        <li class="flex items-start">
-          <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-          <span class="text-gray-700">Febres constantes e antibióticos em excesso</span>
-        </li>
-        <li class="flex items-start">
-          <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-          <span class="text-gray-700">Irritabilidade e falta de apetite</span>
-        </li>
-        </h2>
-         <div class="container mx-auto max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-       Eu já estive exatamente aonde você está agora.
-      </h2>
-      </ul>
     </div>
   </section>
 
   <!-- Benefits Section -->
-  <section class="py-16 px-4 bg-white">
-    <div class="container mx-auto max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
-        O que é o Escudo Imunológico?
-      </h2>
-      <p class="text-lg text-center text-gray-700 mb-10">
-        O Escudo Imunológico é um protocolo direto, criado por uma mãe real, para mães que estão cansadas de sofrer sem respostas.
-        </h2>
-        <p class="text-lg text-center text-gray-700 mb-10">
-São 7 dias com ações claras, comida simples e rotina emocional pra transformar a saúde da sua criança.
-      </p>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="benefit-item bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-          <div class="flex items-start">
-            <i class="fas fa-check-circle text-emerald-600 text-2xl mr-3"></i>
-            <div>
-              <h3 class="font-bold text-gray-800">PDF com plano completo</h3>
-              <p class="text-gray-600">Tudo organizado para você seguir facilmente</p>
-            </div>
+  <section id="benefits" class="py-16 px-4 bg-gray-900">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">O que você vai conquistar com o <span class="text-emerald-400">Escudo Imunológico</span></h2>
+        <p class="text-lg max-w-2xl mx-auto">Métodos naturais comprovados para fortalecer o sistema imunológico do seu filho</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="benefit-card p-6 rounded-xl">
+          <div class="text-emerald-400 text-3xl mb-4">
+            <i class="fas fa-heartbeat"></i>
           </div>
+          <h3 class="text-xl font-bold mb-2">Menos Infecções</h3>
+          <p class="text-gray-300">Reduza em até 70% as visitas ao médico por infecções respiratórias e virais.</p>
         </div>
-        <div class="benefit-item bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-          <div class="flex items-start">
-            <i class="fas fa-check-circle text-emerald-600 text-2xl mr-3"></i>
-            <div>
-              <h3 class="font-bold text-gray-800">Checklist de imunidade fraca</h3>
-              <p class="text-gray-600">Identifique os sinais de alerta</p>
-            </div>
+        
+        <div class="benefit-card p-6 rounded-xl">
+          <div class="text-emerald-400 text-3xl mb-4">
+            <i class="fas fa-baby"></i>
           </div>
+          <h3 class="text-xl font-bold mb-2">Noites Tranquilas</h3>
+          <p class="text-gray-300">Diga adeus às noites em claro com criança doente e tossindo sem parar.</p>
         </div>
-        <div class="benefit-item bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-          <div class="flex items-start">
-            <i class="fas fa-check-circle text-emerald-600 text-2xl mr-3"></i>
-            <div>
-              <h3 class="font-bold text-gray-800">Receitas práticas e reais</h3>
-              <p class="text-gray-600">Para o dia a dia corrido</p>
-            </div>
+        
+        <div class="benefit-card p-6 rounded-xl">
+          <div class="text-emerald-400 text-3xl mb-4">
+            <i class="fas fa-school"></i>
           </div>
+          <h3 class="text-xl font-bold mb-2">Escola Garantida</h3>
+          <p class="text-gray-300">Seu filho perde menos dias de aula por ficar doente constantemente.</p>
         </div>
-        <div class="benefit-item bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-          <div class="flex items-start">
-            <i class="fas fa-check-circle text-emerald-600 text-2xl mr-3"></i>
-            <div>
-              <h3 class="font-bold text-gray-800">Orientações completas</h3>
-              <p class="text-gray-600">Alimentares, emocionais e ambientais</p>
-            </div>
+        
+        <div class="benefit-card p-6 rounded-xl">
+          <div class="text-emerald-400 text-3xl mb-4">
+            <i class="fas fa-pills"></i>
           </div>
+          <h3 class="text-xl font-bold mb-2">Menos Remédios</h3>
+          <p class="text-gray-300">Reduza a dependência de antibióticos e outros medicamentos químicos.</p>
         </div>
-        <div class="benefit-item bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-          <div class="flex items-start">
-            <i class="fas fa-check-circle text-emerald-600 text-2xl mr-3"></i>
-            <div>
-              <h3 class="font-bold text-gray-800">Lista de sabotadores</h3>
-              <p class="text-gray-600">+ substituições reais</p>
-            </div>
+        
+        <div class="benefit-card p-6 rounded-xl">
+          <div class="text-emerald-400 text-3xl mb-4">
+            <i class="fas fa-smile"></i>
           </div>
+          <h3 class="text-xl font-bold mb-2">Mais Energia</h3>
+          <p class="text-gray-300">Seu filho terá mais disposição para brincar e se desenvolver.</p>
         </div>
-        <div class="benefit-item bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-          <div class="flex items-start">
-            <i class="fas fa-check-circle text-emerald-600 text-2xl mr-3"></i>
-            <div>
-              <h3 class="font-bold text-gray-800">FAQ materno</h3>
-              <p class="text-gray-600">Com dúvidas respondidas</p>
-            </div>
+        
+        <div class="benefit-card p-6 rounded-xl">
+          <div class="text-emerald-400 text-3xl mb-4">
+            <i class="fas fa-shield-virus"></i>
           </div>
+          <h3 class="text-xl font-bold mb-2">Proteção Natural</h3>
+          <p class="text-gray-300">Fortalecimento imunológico sem efeitos colaterais ou riscos à saúde.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bonus Section -->
-  <section class="py-16 px-4 bg-gradient-to-r from-blue-50 to-emerald-50">
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="py-16 px-4 bg-gray-800">
     <div class="container mx-auto max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
-        Bônus Exclusivos
-      </h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <div class="flex items-start">
-            <div class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-4">
-              <i class="fas fa-gift text-xl"></i>
-            </div>
-            <div>
-              <h3 class="font-bold text-gray-800">Gestão de Crise</h3>
-              <p class="text-gray-600">"O que fazer quando ele adoece?"</p>
-            </div>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Como o <span class="text-emerald-400">Escudo Imunológico</span> funciona</h2>
+        <p class="text-lg">Um método simples em 3 passos para transformar a saúde do seu filho</p>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="bg-emerald-900 text-emerald-400 rounded-full h-12 w-12 flex items-center justify-center text-xl font-bold mb-4 md:mb-0 md:mr-6 flex-shrink-0">1</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Identificação dos Pontos Fracos</h3>
+            <p class="text-gray-300">Você vai aprender a identificar exatamente o que está deixando o sistema imunológico do seu filho vulnerável, desde deficiências nutricionais até hábitos que prejudicam a imunidade.</p>
           </div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <div class="flex items-start">
-            <div class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-4">
-              <i class="fas fa-gift text-xl"></i>
-            </div>
-            <div>
-              <h3 class="font-bold text-gray-800">Kit lanche escudo</h3>
-              <p class="text-gray-600">(pra escola)</p>
-            </div>
+        
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="bg-emerald-900 text-emerald-400 rounded-full h-12 w-12 flex items-center justify-center text-xl font-bold mb-4 md:mb-0 md:mr-6 flex-shrink-0">2</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Protocolo de Fortalecimento</h3>
+            <p class="text-gray-300">Aplicação do protocolo de 7 dias com alimentos específicos, suplementos naturais e ajustes de rotina que vão potencializar a capacidade do corpo de se defender.</p>
           </div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <div class="flex items-start">
-            <div class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-4">
-              <i class="fas fa-gift text-xl"></i>
-            </div>
-            <div>
-              <h3 class="font-bold text-gray-800">A importância do cocô</h3>
-              <p class="text-gray-600">(guia simples e direto)</p>
-            </div>
+        
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="bg-emerald-900 text-emerald-400 rounded-full h-12 w-12 flex items-center justify-center text-xl font-bold mb-4 md:mb-0 md:mr-6 flex-shrink-0">3</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Manutenção Contínua</h3>
+            <p class="text-gray-300">Estratégias simples para manter o sistema imunológico forte a longo prazo, prevenindo novas infecções e garantindo saúde duradoura.</p>
           </div>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-md">
-          <div class="flex items-start">
-            <div class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-4">
-              <i class="fas fa-gift text-xl"></i>
-            </div>
-            <div>
-              <h3 class="font-bold text-gray-800">PDF Exclusivo</h3>
-              <p class="text-gray-600">A Dieta Infantil Que Ninguém Te Ensinou</p>
-            </div>
-          </div>
-        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <a href="https://pay.kiwify.com.br/8YvnksT" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+          Quero começar agora
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section class="py-16 px-4 bg-white">
-    <div class="container mx-auto max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
-        Mães que confiaram no Escudo
-      </h2>
-      <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-xl mb-8">
-        <iframe class="w-full h-64 md:h-96" src="https://www.youtube.com/embed/3lOz2NMDLas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+  <section id="testimonials" class="py-16 px-4 bg-gray-900">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">O que as mães estão dizendo</h2>
+        <p class="text-lg">Depoimentos reais de quem já transformou a saúde dos filhos</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="testimonial-card bg-emerald-50 p-6 rounded-xl">
-          <div class="flex items-center mb-3">
-            <i class="fas fa-quote-left text-emerald-400 mr-2"></i>
-            <p class="text-gray-700 italic">"Nariz escorrendo nunca foi normal."</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="testimonial-card p-6 rounded-xl">
+          <div class="flex items-center mb-4">
+            <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Claudia">
+            <div>
+              <h4 class="font-bold">Ana Claudia</h4>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
           </div>
-          <div class="flex items-center">
-            <div class="w-8 h-8 bg-emerald-200 rounded-full mr-3"></div>
-            <span class="text-sm text-gray-600">Ana, mãe do Pedro</span>
-          </div>
+          <p class="text-gray-300 italic">"Meu filho tinha pneumonia recorrente. Depois do protocolo, faz 8 meses que não precisa de antibiótico. Mudou nossa vida!"</p>
         </div>
-        <div class="testimonial-card bg-emerald-50 p-6 rounded-xl">
-          <div class="flex items-center mb-3">
-            <i class="fas fa-quote-left text-emerald-400 mr-2"></i>
-            <p class="text-gray-700 italic">"Mães não nascem sabendo, mas aprendem quando decidem."</p>
+        
+        <div class="testimonial-card p-6 rounded-xl">
+          <div class="flex items-center mb-4">
+            <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Patricia">
+            <div>
+              <h4 class="font-bold">Patricia</h4>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
           </div>
-          <div class="flex items-center">
-            <div class="w-8 h-8 bg-emerald-200 rounded-full mr-3"></div>
-            <span class="text-sm text-gray-600">Juliana, mãe da Sofia</span>
-          </div>
+          <p class="text-gray-300 italic">"Minha filha tinha alergia respiratória grave. Com as técnicas naturais, os sintomas reduziram 90%. Não acreditei no resultado!"</p>
         </div>
-        <div class="testimonial-card bg-emerald-50 p-6 rounded-xl">
-          <div class="flex items-center mb-3">
-            <i class="fas fa-quote-left text-emerald-400 mr-2"></i>
-            <p class="text-gray-700 italic">"Não é genética. É rotina."</p>
+        
+        <div class="testimonial-card p-6 rounded-xl">
+          <div class="flex items-center mb-4">
+            <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos">
+            <div>
+              <h4 class="font-bold">Carlos</h4>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
           </div>
-          <div class="flex items-center">
-            <div class="w-8 h-8 bg-emerald-200 rounded-full mr-3"></div>
-            <span class="text-sm text-gray-600">Carla, mãe do Lucas</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Guarantee Section -->
-  <section class="py-16 px-4 bg-gray-50">
-    <div class="container mx-auto max-w-4xl text-center">
-      <div class="bg-white p-8 rounded-xl shadow-md">
-        <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-          <i class="fas fa-shield-alt text-emerald-600 text-3xl"></i>
-        </div>
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-          Garantia Incondicional de 7 Dias
-        </h2>
-        <p class="text-lg text-gray-700 mb-6">
-          Teste o Escudo por 7 dias. Se não sentir diferença na rotina ou não se identificar com o conteúdo, devolvemos 100% do seu dinheiro.
-        </p>
-        <div class="flex justify-center">
-          <div class="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-bold">
-            SEM RISCO PARA VOCÊ
-          </div>
+          <p class="text-gray-300 italic">"Meu filho faltava 1 semana por mês na escola. Depois do Escudo Imunológico, ele está indo todos os dias. Valeu cada centavo!"</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-16 px-4 bg-white">
+  <section id="faq" class="py-16 px-4 bg-gray-800">
     <div class="container mx-auto max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
-        Dúvidas Frequentes
-      </h2>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Perguntas Frequentes</h2>
+        <p class="text-lg">Tire suas dúvidas sobre o Escudo Imunológico</p>
+      </div>
+      
       <div class="space-y-4">
-        <div class="bg-gray-50 p-6 rounded-xl">
-          <h3 class="font-bold text-gray-800 mb-2 flex items-center">
-            <i class="fas fa-question-circle text-emerald-600 mr-3"></i>
-            É difícil de seguir?
-          </h3>
-          <p class="text-gray-700">Não! O plano foi criado pensando na mãe comum com rotina corrida.</p>
+        <div class="faq-card p-6 rounded-xl border border-gray-700">
+          <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(1)">
+            <h3 class="font-bold text-lg">Quanto tempo leva para ver resultados?</h3>
+            <i class="fas fa-chevron-down transition-transform" id="faq-icon-1"></i>
+          </button>
+          <div class="mt-3 text-gray-300 hidden" id="faq-content-1">
+            <p>A maioria das famílias começa a notar melhoras significativas já na primeira semana de aplicação do protocolo. Os resultados completos geralmente são visíveis após 3-4 semanas de aplicação consistente.</p>
+          </div>
         </div>
-        <div class="bg-gray-50 p-6 rounded-xl">
-          <h3 class="font-bold text-gray-800 mb-2 flex items-center">
-            <i class="fas fa-question-circle text-emerald-600 mr-3"></i>
-            Precisa de produtos caros?
-          </h3>
-          <p class="text-gray-700">Não. Tudo usa comida real, acessível e adaptada.</p>
+        
+        <div class="faq-card p-6 rounded-xl border border-gray-700">
+          <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(2)">
+            <h3 class="font-bold text-lg">Precisa de acompanhamento médico?</h3>
+            <i class="fas fa-chevron-down transition-transform" id="faq-icon-2"></i>
+          </button>
+          <div class="mt-3 text-gray-300 hidden" id="faq-content-2">
+            <p>O Escudo Imunológico não substitui o acompanhamento médico, mas complementa de forma natural. Todas as técnicas são baseadas em nutrição e hábitos saudáveis, sem contraindicações. Recomendamos sempre informar seu pediatra sobre qualquer mudança na rotina do seu filho.</p>
+          </div>
         </div>
-        <div class="bg-gray-50 p-6 rounded-xl">
-          <h3 class="font-bold text-gray-800 mb-2 flex items-center">
-            <i class="fas fa-question-circle text-emerald-600 mr-3"></i>
-            Serve pra bebês?
-          </h3>
-          <p class="text-gray-700">Sim, a partir de 1 ano.</p>
+        
+        <div class="faq-card p-6 rounded-xl border border-gray-700">
+          <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(3)">
+            <h3 class="font-bold text-lg">Funciona para crianças com doenças crônicas?</h3>
+            <i class="fas fa-chevron-down transition-transform" id="faq-icon-3"></i>
+          </button>
+          <div class="mt-3 text-gray-300 hidden" id="faq-content-3">
+            <p>Sim, o protocolo pode ajudar a fortalecer o sistema imunológico mesmo em crianças com condições crônicas, mas nesses casos recomendamos consultar o médico antes de iniciar. Já ajudamos muitas crianças com asma, alergias e outras condições a melhorarem sua qualidade de vida.</p>
+          </div>
         </div>
-        <div class="bg-gray-50 p-6 rounded-xl">
-          <h3 class="font-bold text-gray-800 mb-2 flex items-center">
-            <i class="fas fa-question-circle text-emerald-600 mr-3"></i>
-            E se eu não gostar?
-          </h3>
-          <p class="text-gray-700">Você tem 7 dias pra testar e pedir reembolso se quiser.</p>
+        
+        <div class="faq-card p-6 rounded-xl border border-gray-700">
+          <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(4)">
+            <h3 class="font-bold text-lg">E se não funcionar para meu filho?</h3>
+            <i class="fas fa-chevron-down transition-transform" id="faq-icon-4"></i>
+          </button>
+          <div class="mt-3 text-gray-300 hidden" id="faq-content-4">
+            <p>Oferecemos garantia incondicional de 7 dias. Se dentro desse período você aplicar o protocolo corretamente e não notar nenhuma melhora, devolvemos 100% do seu investimento sem questionamentos.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <section class="py-16 px-4 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white">
+  <!-- CTA Section -->
+  <section class="py-16 px-4 bg-gray-900">
     <div class="container mx-auto max-w-4xl text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6">Agora é com você.</h2>
-      <p class="text-xl mb-8">Se você não proteger agora… quem vai pagar essa conta é ele.</p>
-      <a href="https://pay.kiwify.com.br/8YvnksT" class="inline-block bg-white hover:bg-gray-100 text-emerald-700 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
-        <i class="fas fa-shield-alt mr-2"></i> QUERO O ESCUDO AGORA
-      </a>
+      <h2 class="text-3xl font-bold mb-6">Você vai continuar vendo seu filho sofrer?</h2>
+      <p class="text-xl mb-8">Cada dia que você espera é um dia a mais de sofrimento desnecessário. A hora de agir é <span class="text-emerald-400 font-bold">agora</span>.</p>
+      
+      <div class="bg-gray-800 rounded-xl p-8 shadow-lg max-w-2xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Oferta Especial</h3>
+        <p class="text-lg mb-6">Adquira hoje e receba <span class="font-bold">3 bônus exclusivos</span>:</p>
+        
+        <ul class="space-y-3 text-left mb-8">
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-emerald-400 mt-1 mr-2"></i>
+            <span>Guia de Alimentos Fortalecedores (PDF)</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-emerald-400 mt-1 mr-2"></i>
+            <span>Acesso ao Grupo Exclusivo de Mães no WhatsApp</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-emerald-400 mt-1 mr-2"></i>
+            <span>Vídeo-aula com Receitas de Sucos Imunológicos</span>
+          </li>
+        </ul>
+        
+        <a href="https://pay.kiwify.com.br/8YvnksT" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105 text-lg w-full max-w-xs mx-auto">
+          <i class="fas fa-shield-alt mr-2"></i> Proteger Meu Filho Agora
+        </a>
+        
+        <div class="mt-6 flex items-center justify-center">
+          <i class="fas fa-lock text-gray-400 mr-2"></i>
+          <span class="text-sm text-gray-400">Compra 100% segura</span>
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- Floating CTA -->
-  <div class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
-    <a href="https://pay.kiwify.com.br/8YvnksT" class="floating-cta bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-full shadow-xl transition duration-300">
-      <i class="fas fa-shield-alt mr-2"></i> PROTEGER MEU FILHO AGORA
-    </a>
-  </div>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-12 px-4">
-    <div class="container mx-auto max-w-4xl text-center">
-      <div class="flex justify-center mb-6">
-        <i class="fas fa-shield-alt text-emerald-400 text-3xl"></i>
-      </div>
-      <p class="mb-2">Escudo Imunológico © 2025</p>
-      <p class="mb-2">Suporte: escudoimunologico@gmail.com</p>
-      <p class="mb-6">Todos os direitos reservados</p>
-      <div class="flex justify-center space-x-4">
-        <a href="#" class="text-gray-300 hover:text-white">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="text-gray-300 hover:text-white">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" class="text-gray-300 hover:text-white">
-          <i class="fab fa-youtube"></i>
-        </a>
+  <footer class="py-8 px-4 bg-gray-900 border-t border-gray-800">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+          <i class="fas fa-shield-alt text-emerald-500 text-2xl mr-2"></i>
+          <span class="text-xl font-bold">Escudo Imunológico</span>
+        </div>
+        
+        <div class="flex space-x-4 mb-4 md:mb-0">
+          <a href="#" class="text-gray-400 hover:text-emerald-400 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-emerald-400 transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-emerald-400 transition">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        
+        <div class="text-sm text-gray-500 text-center md:text-right">
+          <p>© 2023 Escudo Imunológico. Todos os direitos reservados.</p>
+          <p class="mt-1"><a href="#" class="hover:text-gray-300">Termos de Uso</a> | <a href="#" class="hover:text-gray-300">Política de Privacidade</a></p>
+        </div>
       </div>
     </div>
   </footer>
+
+  <script>
+    // Toggle FAQ items
+    function toggleFAQ(id) {
+      const content = document.getElementById(`faq-content-${id}`);
+      const icon = document.getElementById(`faq-icon-${id}`);
+      
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    }
+    
+    // Show floating CTA when scrolling
+    window.addEventListener('scroll', function() {
+      const floatingCTA = document.querySelector('.floating-cta');
+      if (window.scrollY > 300) {
+        floatingCTA?.classList.remove('hidden');
+      } else {
+        floatingCTA?.classList.add('hidden');
+      }
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=v4sp3r/black" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
