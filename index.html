@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escudo Imunológico | Proteja Seu Filho em 7 Dias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+        }
+        .cta-gradient {
+            background: linear-gradient(90deg, #f6ad55 0%, #f6871f 100%);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5531981055945?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Escudo%20Imunológico" 
+       class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition-all z-50 pulse"
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg p-3 flex justify-between items-center z-40">
+        <div>
+            <p class="text-sm font-bold text-gray-800">Proteja seu filho agora</p>
+            <p class="text-xs text-gray-600">Apenas <span class="text-red-600 font-bold">R$ 29,90</span></p>
+        </div>
+        <a href="https://pay.kiwify.com.br/8YvnksT" 
+           class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full text-sm transition-all">
+            COMPRAR AGORA
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-30">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mr-2">
+                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                </div>
+                <h1 class="text-xl font-bold text-gray-800">Escudo Imunológico</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#conteudo" class="text-gray-700 hover:text-yellow-600 transition">Conteúdo</a></li>
+                    <li><a href="#depoimentos" class="text-gray-700 hover:text-yellow-600 transition">Depoimentos</a></li>
+                    <li><a href="#oferta" class="text-gray-700 hover:text-yellow-600 transition">Oferta</a></li>
+                    <li><a href="#faq" class="text-gray-700 hover:text-yellow-600 transition">FAQ</a></li>
+                </ul>
+            </nav>
+            <a href="https://pay.kiwify.com.br/8YvnksT" 
+               class="hidden md:block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full transition-all">
+                PROTEGER AGORA
+            </a>
+            <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full px-4 py-3 border-t" id="mobile-menu">
+            <ul class="space-y-3">
+                <li><a href="#conteudo" class="block text-gray-700 hover:text-yellow-600 transition">Conteúdo</a></li>
+                <li><a href="#depoimentos" class="block text-gray-700 hover:text-yellow-600 transition">Depoimentos</a></li>
+                <li><a href="#oferta" class="block text-gray-700 hover:text-yellow-600 transition">Oferta</a></li>
+                <li><a href="#faq" class="block text-gray-700 hover:text-yellow-600 transition">FAQ</a></li>
+                <li>
+                    <a href="https://pay.kiwify.com.br/8YvnksT" 
+                       class="block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full text-center transition-all">
+                        PROTEGER AGORA
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-12 md:py-20">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-4 leading-tight">
+                    A única coisa entre seu filho e o hospital!
+                </h1>
+                <p class="text-lg md:text-xl text-gray-700 mb-8">
+                    Proteja a imunidade do seu filho em 7 dias, sem remédios e sem complicações
+                </p>
+                
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fas fa-child mr-1"></i> 1-12 anos
+                    </span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fas fa-shield-alt mr-1"></i> 100% Natural
+                    </span>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fas fa-check-circle mr-1"></i> Garantia de 7 dias
+                    </span>
+                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fas fa-tag mr-1"></i> Apenas R$ 29,90
+                    </span>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://pay.kiwify.com.br/8YvnksT" 
+                       class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-center transition-all shadow-lg">
+                        QUERO PROTEGER MEU FILHO
+                    </a>
+                    <button onclick="document.getElementById('vsl').scrollIntoView({behavior: 'smooth'})" 
+                            class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-8 rounded-full border border-gray-300 transition-all shadow-lg flex items-center justify-center">
+                        <i class="fas fa-play-circle text-red-600 mr-2"></i> Assistir Vídeo
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 slide-up">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                     alt="Criança saudável" 
+                     class="rounded-xl shadow-xl w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- VSL Section -->
+    <section id="vsl" class="bg-gray-50 py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-10 fade-in">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                    Assista ao vídeo e descubra como proteger seu filho
+                </h2>
+                <p class="text-gray-600">
+                    Veja como o Escudo Imunológico pode transformar a saúde do seu filho em apenas 7 dias
+                </p>
+            </div>
+            <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto rounded-xl overflow-hidden shadow-xl slide-up">
+                <iframe class="w-full h-64 md:h-96" src="https://www.youtube.com/embed/bZzJdDdIY0M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section id="conteudo" class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                    Tudo que você vai receber no Escudo Imunológico
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Um protocolo completo e fácil de seguir para fortalecer a imunidade do seu filho naturalmente
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all slide-up" style="animation-delay: 0.1s">
+                    <div class="p-6">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-book text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PDF Protocolo Completo</h3>
+                        <p class="text-gray-600">
+                            Guia passo a passo com todas as informações necessárias para fortalecer a imunidade do seu filho em 7 dias.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all slide-up" style="animation-delay: 0.2s">
+                    <div class="p-6">
+                        <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Checklist 7 Dias</h3>
+                        <p class="text-gray-600">
+                            Lista imprimível com todas as ações diárias para você não esquecer nenhum detalhe importante.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all slide-up" style="animation-delay: 0.3s">
+                    <div class="p-6">
+                        <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-calendar-day text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Plano de Ação Diário</h3>
+                        <p class="text-gray-600">
+                            Cronograma detalhado do que fazer a cada dia para garantir os melhores resultados.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all slide-up" style="animation-delay: 0.4s">
+                    <div class="p-6">
+                        <div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-apple-alt text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bônus: O Segredo da Dieta Infantil</h3>
+                        <p class="text-gray-600">
+                            Descubra os alimentos que realmente fortalecem a imunidade das crianças.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all slide-up" style="animation-delay: 0.5s">
+                    <div class="p-6">
+                        <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-utensils text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bônus: Lanches Saudáveis</h3>
+                        <p class="text-gray-600">
+                            Receitas práticas e deliciosas que seu filho vai adorar e que reforçam a imunidade.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all slide-up" style="animation-delay: 0.6s">
+                    <div class="p-6">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-headset text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Suporte Exclusivo</h3>
+                        <p class="text-gray-600">
+                            Acesso direto ao nosso time de especialistas para tirar todas as suas dúvidas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="py-12 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                    Resultados de mães reais
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Veja o que outras mães estão falando sobre o Escudo Imunológico
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-all slide-up">
+                    <img src="https://drive.google.com/uc?id=1Q1GeokgO6_LyZf8Fi2I0Q-kTwmxCGzZH" 
+                         alt="Depoimento 1" 
+                         class="w-full h-auto rounded-lg">
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-all slide-up" style="animation-delay: 0.2s">
+                    <img src="https://drive.google.com/uc?id=16Zk58hiWHOWuODZ10OD9slR_kvV2r_6M" 
+                         alt="Depoimento 2" 
+                         class="w-full h-auto rounded-lg">
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-all slide-up" style="animation-delay: 0.4s">
+                    <img src="https://drive.google.com/uc?id=12vwPm22F3TVkTSwCgOb-P7q-2jKlpGRD" 
+                         alt="Depoimento 3" 
+                         class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="https://pay.kiwify.com.br/8YvnksT" 
+                   class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg">
+                    QUERO ESSES RESULTADOS PARA MEU FILHO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section id="oferta" class="py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden fade-in">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-gradient-to-br from-green-400 to-blue-500 p-8 text-white flex flex-col justify-center">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4">Oferta Exclusiva</h2>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">R$ 29,90</span>
+                            <span class="line-through ml-2 text-gray-200">R$ 97,00</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Protocolo Completo em PDF
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Checklist 7 Dias
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Plano de Ação Diário
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Bônus: Segredo da Dieta Infantil
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Bônus: Lanches Saudáveis
+                            </li>
+                        </ul>
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg mb-6">
+                            <div class="flex items-start">
+                                <input type="checkbox" id="order-bump" class="mt-1 mr-3" checked>
+                                <label for="order-bump" class="flex-1">
+                                    <p class="font-bold">Sim, quero o bônus "Segredos da Dieta Infantil" por apenas R$ 5</p>
+                                    <p class="text-sm">(valor original R$ 27)</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Garantia Incondicional</h3>
+                            <div class="flex items-center bg-yellow-50 p-3 rounded-lg">
+                                <div class="bg-yellow-100 p-3 rounded-full mr-3">
+                                    <i class="fas fa-shield-alt text-yellow-600"></i>
+                                </div>
+                                <p class="text-gray-700">
+                                    Se em 7 dias você não estiver satisfeita, devolvemos 100% do seu dinheiro sem questionamentos.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Como vou receber o material?</h3>
+                            <p class="text-gray-700 mb-4">
+                                Imediatamente após a confirmação do pagamento, você receberá um e-mail com acesso à área de membros.
+                            </p>
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-lock text-blue-600"></i>
+                                </div>
+                                <p class="text-gray-700">
+                                    Pagamento 100% seguro através da Kiwify
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <a href="https://pay.kiwify.com.br/8YvnksT" 
+                           class="block w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-full text-center transition-all shadow-lg">
+                            SIM, QUERO PROTEGER MEU FILHO AGORA
+                        </a>
+                        
+                        <div class="mt-4 flex justify-center">
+                            <img src="https://kiwify-s3-sa-east-1.amazonaws.com/static/kiwify-payment-methods.png" 
+                                 alt="Métodos de pagamento" 
+                                 class="h-8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                    Perguntas Frequentes
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Tire todas as suas dúvidas antes de proteger seu filho
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden slide-up">
+                    <button class="faq-question w-full text-left p-4 font-medium text-gray-800 hover:bg-gray-50 transition flex justify-between items-center">
+                        <span>Quanto tempo leva para ver resultados?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 hidden">
+                        <p class="text-gray-600">
+                            A maioria das mães começa a perceber diferenças na imunidade dos filhos em 7 a 10 dias. No entanto, para resultados mais consistentes, recomendamos seguir o protocolo completo por pelo menos 30 dias.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden slide-up" style="animation-delay: 0.1s">
+                    <button class="faq-question w-full text-left p-4 font-medium text-gray-800 hover:bg-gray-50 transition flex justify-between items-center">
+                        <span>Precisa de acompanhamento médico?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 hidden">
+                        <p class="text-gray-600">
+                            O Escudo Imunológico é um protocolo 100% natural que não substitui o acompanhamento médico. Recomendamos sempre consultar um pediatra para casos específicos ou se seu filho já tem algum problema de saúde diagnosticado.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden slide-up" style="animation-delay: 0.2s">
+                    <button class="faq-question w-full text-left p-4 font-medium text-gray-800 hover:bg-gray-50 transition flex justify-between items-center">
+                        <span>Para qual idade é indicado?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 hidden">
+                        <p class="text-gray-600">
+                            O protocolo foi desenvolvido para crianças de 1 a 12 anos. Para bebês menores de 1 ano, recomendamos consultar o pediatra antes de implementar qualquer mudança na alimentação.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden slide-up" style="animation-delay: 0.3s">
+                    <button class="faq-question w-full text-left p-4 font-medium text-gray-800 hover:bg-gray-50 transition flex justify-between items-center">
+                        <span>Posso repetir o protocolo?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 hidden">
+                        <p class="text-gray-600">
+                            Sim! O Escudo Imunológico pode ser repetido quantas vezes você quiser. Muitas mães usam o protocolo como prevenção antes de períodos críticos como volta às aulas ou mudanças de estação.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden slide-up" style="animation-delay: 0.4s">
+                    <button class="faq-question w-full text-left p-4 font-medium text-gray-800 hover:bg-gray-50 transition flex justify-between items-center">
+                        <span>E se meu filho não quiser comer os alimentos recomendados?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-4 pb-4 hidden">
+                        <p class="text-gray-600">
+                            No material incluímos um guia especial com dicas para introduzir novos alimentos de forma gradual e divertida. Além disso, oferecemos alternativas para cada item do protocolo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-12 md:py-20 cta-gradient text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-4xl font-bold mb-6 fade-in">
+                Cada dia sem proteção é um risco. Comece agora.
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto fade-in" style="animation-delay: 0.2s">
+                "Você não está comprando um PDF. Está decidindo proteger quem mais ama."
+            </p>
+            <a href="https://pay.kiwify.com.br/8YvnksT" 
+               class="inline-block bg-white hover:bg-gray-100 text-red-600 font-bold py-4 px-8 rounded-full text-lg transition-all shadow-lg pulse">
+                SIM, QUERO O ESCUDO IMUNOLÓGICO
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mr-2">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-bold">Escudo Imunológico</h2>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-2">
+                        © 2023 Todos os direitos reservados
+                    </p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="mb-2">
+                        <i class="fas fa-phone-alt mr-2"></i> Contato: +55 31 98105-5945
+                    </p>
+                    <p class="text-sm text-gray-400 max-w-md">
+                        AVISO LEGAL: Este produto é educativo e não substitui orientação médica. Os resultados podem variar de acordo com cada criança. Consulte sempre um pediatra.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Scroll Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.fade-in, .slide-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Pixel Tracking
+        document.querySelectorAll('a[href^="https://pay.kiwify.com.br"]').forEach(link => {
+            link.addEventListener('click', function() {
+                // Facebook Pixel Tracking
+                fbq('track', 'InitiateCheckout');
+                
+                // Add UTM parameters
+                const url = new URL(this.href);
+                url.searchParams.set('utm_source', 'facebook');
+                url.searchParams.set('utm_medium', 'paid');
+                url.searchParams.set('utm_campaign', 'escudo_imunologico');
+                this.href = url.toString();
+            });
+        });
+
+        // Facebook Pixel Code
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1088799039484831');
+        fbq('track', 'PageView');
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=v4sp3r/landing-nova" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
